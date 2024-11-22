@@ -1,0 +1,25 @@
+# Expense Tracker (Advanced)
+income = float(input("Enter your monthly income: "))
+total_expenses = 0
+total_savings = 0
+categories = ["Food", "Transport", "Utilities", "Entertainment"]
+
+print("Enter your expenses for each category:")
+
+for category in categories:
+    expense = float(input(f"{category} expense: "))
+    total_expenses += expense
+
+total_savings = income - total_expenses
+
+print("\n--- Monthly Report ---")
+print(f"Total Income: {income}")
+print(f"Total Expenses: {total_expenses}")
+print(f"Total Savings: {total_savings}")
+
+if total_savings > 0:
+    print("You are saving money! Keep it up.")
+elif total_savings == 0:
+    print("You're breaking even. Try to save more.")
+else:
+    print("You're overspending. Try to reduce your expenses.")
